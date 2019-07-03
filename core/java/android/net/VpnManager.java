@@ -719,6 +719,7 @@ public class VpnManager {
     }
 
     /**
+<<<<<<< HEAD
      * Get the vpn profile owned by the calling uid with the given name from the vpn database.
      *
      * <p>Note this method should not be used for platform VPN profiles. </p>
@@ -790,6 +791,12 @@ public class VpnManager {
     public String[] listFromVpnProfileStore(@NonNull String prefix) {
         try {
             return mService.listFromVpnProfileStore(prefix);
+    /**
+     * @hide
+     */
+    public VpnProfile[] getAllLegacyVpns() {
+        try {
+            return mService.getAllLegacyVpns();
         } catch (RemoteException e) {
             throw e.rethrowFromSystemServer();
         }
